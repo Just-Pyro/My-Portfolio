@@ -1,1 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
+
+@layer components {
+  .main-navbar {
+    @apply items-center flex justify-between px-52 h-10;
+  }
+
+  .logo {
+    @apply h-full flex items-center;
+  }
+
+  .pages {
+    @apply flex items-center space-x-10 h-full;
+  }
+
+  .content-wrapper {
+    @apply px-52 pb-5;
+  }
+
+  .headline,
+  .subheading {
+    @apply text-lg flex py-5;
+  }
+
+  .head-left {
+    @apply w-1/2 flex flex-col justify-end pb-5;
+  }
+
+  .sub-left {
+    @apply w-1/2 flex items-center justify-center pb-5;
+  }
+
+  .head-left h1 {
+    @apply text-5xl font-bold;
+  }
+
+  .head-right,
+  .sub-right {
+    @apply w-1/2 flex items-center justify-center;
+  }
+
+  .sub-right {
+    @apply text-2xl italic;
+  }
+
+  .img-wrapper,
+  .cat-gif {
+    @apply w-84 h-96 hover:scale-105 transition-all ease-in-out rounded-lg overflow-hidden shadow-2xl;
+  }
+
+  .profile-img {
+    @apply w-84 h-96 object-cover;
+  }
+
+  .call-to-action {
+    @apply mt-3 mb-7;
+  }
+
+  .button {
+    @apply px-3 py-2;
+  }
+
+  .cta-button {
+    @apply border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all ease-in-out;
+  }
+}
+
+@layer base {
+  body {
+    height: 100vh;
+    background: radial-gradient(
+      circle at 45% 20%,
+      rgba(0, 0, 0, 0.64) 0%,
+      #141212 70%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+  }
+
+  .montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .montserrat-thin {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+}
