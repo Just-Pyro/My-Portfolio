@@ -3,6 +3,7 @@
 @import "tailwindcss";
 
 @layer components {
+  /* Home */
   .main-navbar {
     @apply items-center flex justify-between px-52 h-10;
   }
@@ -64,6 +65,24 @@
 
   .cta-button {
     @apply border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all ease-in-out;
+  }
+
+  /* About */
+  .title {
+    @apply flex items-center justify-between p-5;
+  }
+  .title h3 {
+    @apply text-9xl font-extrabold;
+  }
+
+  /* temporary -to be removed */
+  .title-left,
+  .title-right {
+    @apply border border-white w-1/2;
+  }
+
+  .title-left {
+    @apply flex justify-end lg:pe-5;
   }
 }
 
