@@ -5,7 +5,7 @@
 @layer components {
   /* Home */
   .main-navbar {
-    @apply items-center flex justify-between px-52 h-10;
+    @apply items-center flex justify-between px-52 h-12 text-lg;
   }
 
   .logo {
@@ -17,7 +17,7 @@
   }
 
   .content-wrapper {
-    @apply px-52 pb-5;
+    @apply px-52 pb-10;
   }
 
   .headline,
@@ -67,22 +67,72 @@
     @apply border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all ease-in-out;
   }
 
+  .skills {
+    @apply text-2xl;
+  }
+
+  .skills h5 {
+    @apply text-black text-4xl font-bold my-3 px-2 bg-gradient-to-r from-white to-transparent;
+  }
+
+  .skills ul {
+    @apply p-5;
+  }
+
+  .specific-skill {
+    @apply py-2 px-3 rounded-lg bg-stone-700 w-auto inline-block mx-2 hover:scale-110 transition-all ease-in-out cursor-default items-center;
+  }
+
+  .specific-skill span {
+    @apply text-lg border;
+  }
+
   /* About */
   .title {
-    @apply flex items-center justify-between p-5;
+    @apply flex items-center justify-between p-5 mb-10;
   }
   .title h3 {
     @apply text-9xl font-extrabold;
   }
 
-  /* temporary -to be removed */
   .title-left,
   .title-right {
-    @apply border border-white w-1/2;
+    @apply w-1/2;
   }
 
   .title-left {
-    @apply flex justify-end lg:pe-5;
+    @apply flex justify-end lg:pe-10;
+  }
+
+  .aboutme-img,
+  .stack-1,
+  .stack-2 {
+    @apply rounded-2xl border-4 border-white w-[300px] h-[300px] absolute top-0 left-0 shadow-xl;
+  }
+
+  .image-wrapper {
+    @apply relative w-[300px] h-[300px];
+  }
+
+  .stack-1 {
+    @apply bg-amber-300 -rotate-[24deg];
+  }
+
+  .stack-2 {
+    @apply bg-emerald-700 -rotate-12;
+  }
+
+  .intro {
+    @apply text-3xl indent-16 flex-col space-y-5;
+  }
+
+  .intro div {
+    @apply flex space-x-5 text-justify;
+  }
+
+  .paragraph-1 img,
+  .paragraph-2 img {
+    @apply w-[300px] h-[300px] object-contain rounded-2xl;
   }
 }
 

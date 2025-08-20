@@ -1,4 +1,6 @@
 import aboutme from "../assets/img/aboutme.png";
+import intro1 from "../assets/img/intro1.png";
+import intro2 from "../assets/img/intro2.png";
 
 const About = () => {
   return (
@@ -6,13 +8,15 @@ const About = () => {
       <div className="content-wrapper">
         <div className="title">
           <div className="title-left">
-            <img
-              src={aboutme}
-              alt="a guy greeting from phone"
-              className="aboutme-img"
-              width={300}
-              height={300}
-            />
+            <div className="image-wrapper">
+              <div className="stack-1"></div>
+              <div className="stack-2"></div>
+              <img
+                src={aboutme}
+                alt="a guy greeting from phone"
+                className="aboutme-img"
+              />
+            </div>
           </div>
           <div className="title-right">
             <h3 className="montserrat-regular">
@@ -22,36 +26,26 @@ const About = () => {
           </div>
         </div>
         <div className="intro">
-          <h5>Intro</h5>
-          <p>
-            Ever since Senior High, I’ve been hooked on programming — at first
-            because I wanted to make my own game. When college came, my focus
-            shifted to the web, since my last two years were dedicated to it. I
-            couldn’t master everything in such a short time, so I decided to
-            focus on web development while keeping game development as a future
-            goal.
-          </p>
-          <p>
-            As a web programmer, my journey has been nerve-cracking at times,
-            exciting, and fun — especially working alongside great teammates.
-            Now, I’m looking forward to learning more, growing my skills, and
-            building projects that truly make an impact.
-          </p>
-        </div>
-        <div className="skills">
-          <h5>Skills</h5>
-          <ul>
-            <li>
-              <strong>Frontend</strong>: HTML, CSS, JavaScript, ReactJS,
-              TailwindCSS, Bootstrap
-            </li>
-            <li>
-              <strong>Backend</strong>: CodeIgniter, Laravel, PHP
-            </li>
-            <li>
-              <strong>Tools</strong>: Git, GitHub, VS Code, REST APIs
-            </li>
-          </ul>
+          <div className="paragraph-1">
+            <p>
+              Ever since Senior High, I’ve been hooked on programming — at first
+              because I wanted to make my own game. When college came, my focus
+              shifted to the web, since my last two years were dedicated to it.
+              I couldn’t master everything in such a short time, so I decided to
+              focus on web development while keeping game development as a
+              future goal.
+            </p>
+            <img src={intro1} alt="" />
+          </div>
+          <div className="paragraph-2">
+            <img src={intro2} alt="" />
+            <p>
+              As a web programmer, my journey has been nerve-cracking at times,
+              exciting, and fun — especially working alongside great teammates.
+              Now, I’m looking forward to learning more, growing my skills, and
+              building projects that truly make an impact.
+            </p>
+          </div>
         </div>
         <div className="work-style">
           <h5>Work Style</h5>

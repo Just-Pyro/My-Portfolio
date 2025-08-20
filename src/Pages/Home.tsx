@@ -3,6 +3,13 @@ import profile from "../assets/img/portfolio-pic.png";
 import cat from "../assets/gif/cat-programmer.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBootstrap,
+  faCss3,
+  faHtml5,
+  faJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   return (
@@ -36,6 +43,39 @@ const Home = () => {
           <Link to="/projects" className="button cta-button">
             See my Work <FontAwesomeIcon icon={faArrowRight} />
           </Link>
+        </div>
+
+        <div className="skills montserrat-regular">
+          <h5>SKILLS</h5>
+          <ul className="border">
+            <li>
+              <strong>Frontend</strong>:{" "}
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faHtml5} /> <span>HTML5</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faCss3} /> <span>CSS3</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faJs} /> <span>JavaScript</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faReact} /> <span>ReactJS</span>
+              </div>
+              <div className="specific-skill">
+                <span>TailwindCSS</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faBootstrap} /> <span>Bootstrap</span>
+              </div>
+            </li>
+            <li>
+              <strong>Backend</strong>: CodeIgniter, Laravel, PHP
+            </li>
+            <li>
+              <strong>Tools</strong>: Git, GitHub, VS Code, REST APIs
+            </li>
+          </ul>
         </div>
       </div>
     </>
