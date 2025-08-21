@@ -34,7 +34,7 @@
   }
 
   .head-left h1 {
-    @apply text-5xl font-bold;
+    @apply text-7xl font-bold;
   }
 
   .head-right,
@@ -79,12 +79,16 @@
     @apply p-5;
   }
 
+  .skills li {
+    @apply space-y-5;
+  }
+
   .specific-skill {
-    @apply py-2 px-3 rounded-lg bg-stone-700 w-auto inline-block mx-2 hover:scale-110 transition-all ease-in-out cursor-default items-center;
+    @apply py-2 px-3 rounded-lg bg-stone-700 w-auto inline-flex mx-2 hover:scale-110 transition-all ease-in-out cursor-default items-center gap-1.5 shadow-md;
   }
 
   .specific-skill span {
-    @apply text-lg border;
+    @apply text-lg;
   }
 
   /* About */
@@ -123,7 +127,7 @@
   }
 
   .intro {
-    @apply text-3xl indent-16 flex-col space-y-5;
+    @apply text-3xl indent-16 flex-col space-y-5 mb-10;
   }
 
   .intro div {
@@ -133,6 +137,22 @@
   .paragraph-1 img,
   .paragraph-2 img {
     @apply w-[300px] h-[300px] object-contain rounded-2xl;
+  }
+
+  .work-style h5 {
+    @apply text-black text-4xl font-bold my-3 px-2 bg-gradient-to-r from-white to-transparent;
+  }
+
+  .work-style-img {
+    @apply w-[400px] object-contain rounded;
+  }
+
+  .work-style div {
+    @apply flex space-x-5;
+  }
+
+  .work-style p {
+    @apply text-3xl indent-16 text-justify;
   }
 }
 

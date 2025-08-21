@@ -6,10 +6,18 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import {
   faBootstrap,
   faCss3,
+  faGithub,
   faHtml5,
   faJs,
+  faLaravel,
+  faPhp,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
+import Tailwind from "../assets/svg/tailwind";
+import Codeigniter from "../assets/svg/Codeigniter";
+import VSCode from "../assets/svg/VSCode";
+import Git from "../assets/svg/Git";
+import RESTApi from "../assets/svg/RESTApi";
 
 const Home = () => {
   return (
@@ -47,9 +55,9 @@ const Home = () => {
 
         <div className="skills montserrat-regular">
           <h5>SKILLS</h5>
-          <ul className="border">
+          <ul>
             <li>
-              <strong>Frontend</strong>:{" "}
+              <strong>Frontend</strong>:
               <div className="specific-skill">
                 <FontAwesomeIcon icon={faHtml5} /> <span>HTML5</span>
               </div>
@@ -63,17 +71,45 @@ const Home = () => {
                 <FontAwesomeIcon icon={faReact} /> <span>ReactJS</span>
               </div>
               <div className="specific-skill">
-                <span>TailwindCSS</span>
+                <Tailwind /> <span>TailwindCSS</span>
               </div>
               <div className="specific-skill">
                 <FontAwesomeIcon icon={faBootstrap} /> <span>Bootstrap</span>
               </div>
             </li>
             <li>
-              <strong>Backend</strong>: CodeIgniter, Laravel, PHP
+              <strong>Backend</strong>:
+              <div className="specific-skill">
+                <Codeigniter />
+                <span>CodeIgniter</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faLaravel} />
+                <span>Laravel</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faPhp} />
+                <span>PHP</span>
+              </div>
             </li>
             <li>
-              <strong>Tools</strong>: Git, GitHub, VS Code, REST APIs
+              <strong>Tools</strong>:
+              <div className="specific-skill">
+                <Git />
+                <span>Git</span>
+              </div>
+              <div className="specific-skill">
+                <FontAwesomeIcon icon={faGithub} />
+                <span>Github</span>
+              </div>
+              <div className="specific-skill">
+                <VSCode />
+                <span>VS Code</span>
+              </div>
+              <div className="specific-skill">
+                <RESTApi />
+                <span>REST APIs</span>
+              </div>
             </li>
           </ul>
         </div>

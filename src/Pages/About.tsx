@@ -1,6 +1,7 @@
 import aboutme from "../assets/img/aboutme.png";
 import intro1 from "../assets/img/intro1.png";
 import intro2 from "../assets/img/intro2.png";
+import workStyle from "../assets/img/work-style.png";
 
 const About = () => {
   return (
@@ -47,14 +48,21 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="work-style">
-          <h5>Work Style</h5>
-          <p>
-            I enjoy solving problems by creating reusable components, variables,
-            and functions rather than reinventing the wheel. My goal is to make
-            code clean, readable, and easy to maintain — while still leaving
-            room for creativity in the design and functionality.
-          </p>
+        <div className="work-style montserrat-regular">
+          <h5>MY WORK STYLE</h5>
+          <div>
+            <img
+              src={workStyle}
+              alt="work style illustration"
+              className="work-style-img"
+            />
+            <p>
+              I enjoy solving problems by creating reusable components,
+              variables, and functions rather than reinventing the wheel. My
+              goal is to make code clean, readable, and easy to maintain — while
+              still leaving room for creativity in the design and functionality.
+            </p>
+          </div>
         </div>
       </div>
     </>
