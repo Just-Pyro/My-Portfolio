@@ -1,4 +1,4 @@
-const Tailwind = () => {
+const TailwindIcon = () => {
   return (
     <>
       <svg
@@ -28,4 +28,4 @@ const Tailwind = () => {
   );
 };
 
-export default Tailwind;
+export default TailwindIcon;

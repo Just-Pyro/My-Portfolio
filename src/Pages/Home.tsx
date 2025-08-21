@@ -13,7 +13,7 @@ import {
   faPhp,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import Tailwind from "../assets/svg/tailwind";
+import TailwindIcon from "../assets/svg/TailwindIcon";
 import Codeigniter from "../assets/svg/Codeigniter";
 import VSCode from "../assets/svg/VSCode";
 import Git from "../assets/svg/Git";
@@ -71,7 +71,7 @@ const Home = () => {
                 <FontAwesomeIcon icon={faReact} /> <span>ReactJS</span>
               </div>
               <div className="specific-skill">
-                <Tailwind /> <span>TailwindCSS</span>
+                <TailwindIcon /> <span>TailwindCSS</span>
               </div>
               <div className="specific-skill">
                 <FontAwesomeIcon icon={faBootstrap} /> <span>Bootstrap</span>
