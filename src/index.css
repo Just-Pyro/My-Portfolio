@@ -5,11 +5,11 @@
 @layer components {
   /* Home */
   .main-navbar {
-    @apply items-center flex justify-between px-52 h-12 text-lg;
+    @apply items-center flex justify-between px-52 h-16 text-xl sticky top-0 hover:backdrop-blur-2xl transition-all ease-in-out;
   }
 
   .logo {
-    @apply h-full flex items-center;
+    @apply h-full flex items-center font-bold;
   }
 
   .pages {
@@ -17,7 +17,7 @@
   }
 
   .content-wrapper {
-    @apply px-52 pb-10;
+    @apply mt-7 px-52 pb-10 min-h-screen;
   }
 
   .headline,
@@ -153,6 +153,64 @@
 
   .work-style p {
     @apply text-3xl indent-16 text-justify;
+  }
+
+  /* Footer */
+  .footer {
+    @apply flex;
+  }
+
+  #contact-me {
+    @apply p-8 flex flex-grow;
+  }
+
+  .subfooter-left img {
+    @apply h-20;
+  }
+
+  .subfooter-right {
+    @apply flex-grow;
+  }
+
+  .title-label {
+    @apply text-lg font-bold;
+  }
+
+  .contact-info {
+    @apply text-xl space-x-2;
+  }
+
+  .rights-reserved {
+    @apply pb-5 mr-3 flex items-end;
+  }
+
+  /* Project */
+  .projects h1 {
+    @apply text-black text-2xl font-bold my-3 px-2 bg-gradient-to-r from-white to-transparent;
+  }
+
+  .project-list {
+    @apply flex flex-col max-h-5/6 overflow-y-auto overflow-x-hidden space-y-3 p-5 items-center;
+  }
+
+  .project-item {
+    @apply flex rounded-md shadow-lg bg-neutral-700 overflow-hidden cursor-pointer hover:scale-105 transition-all ease-in-out w-11/12;
+  }
+
+  .showcase {
+    @apply w-96 h-36 bg-white;
+  }
+
+  .brief-description {
+    @apply flex-grow p-5;
+  }
+
+  .project-title {
+    @apply text-lg font-bold;
+  }
+
+  .project-text {
+    @apply text-sm text-gray-300;
   }
 }
 

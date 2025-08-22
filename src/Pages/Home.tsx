@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <div className="content-wrapper">
-        <div className="headline">
+        <div className="headline" id="headline">
           <div className="head-left montserrat-regular">
             <h1>Hi, I’m Praise Nacua</h1>
             <p> — I build creative, functional, and clean web solutions.</p>

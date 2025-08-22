@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <div className="content-wrapper">
-        <div className="title">
+        <div className="title" id="title">
           <div className="title-left">
             <div className="image-wrapper">
               <div className="stack-1"></div>
