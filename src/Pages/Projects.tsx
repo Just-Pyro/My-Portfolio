@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <>
       <div className="content-wrapper projects">
@@ -14,10 +20,11 @@ const Projects = () => {
             <div className="brief-description">
               <p className="project-title montserrat-regular">Task Manager</p>
               <div className="project-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                tempore repudiandae dolorem minima, doloribus odit? Distinctio
-                qui delectus nulla illum doloribus cum necessitatibus at, sint,
-                suscipit sed blanditiis, possimus alias.
+                A full-stack CRUD application that allows users to create, view,
+                update, and delete tasks. Built with SQLite for persistent data
+                storage, it demonstrates core skills in backend development,
+                database integration, and building a clean, user-friendly
+                interface.
               </div>
             </div>
           </a>

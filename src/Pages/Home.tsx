@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import profile from "../assets/img/portfolio-pic.png";
 import cat from "../assets/gif/cat-programmer.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -48,9 +48,13 @@ const Home = () => {
           </div>
         </div>
         <div className="call-to-action">
-          <Link to="/projects" className="button cta-button">
+          <HashLink
+            smooth
+            to="/projects#start-top-ref"
+            className="button cta-button"
+          >
             See my Work <FontAwesomeIcon icon={faArrowRight} />
-          </Link>
+          </HashLink>
         </div>
 
         <div className="skills montserrat-regular">
