@@ -47,11 +47,11 @@
   }
 
   .offscreen-menu {
-    @apply 2xl:hidden h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 -right-11/12 flex flex-col items-center space-y-10 p-3 pt-22 transition-all;
+    @apply hidden h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 right-0 flex-col items-center space-y-10 p-3 pt-22 transition-all;
   }
 
   .offscreen-menu.active {
-    @apply right-0;
+    @apply flex;
   }
 
   .content-wrapper {
