@@ -47,7 +47,7 @@
   }
 
   .offscreen-menu {
-    @apply h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 -right-11/12 flex flex-col items-center space-y-10 p-3 pt-22 transition-all;
+    @apply md:hidden h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 -right-11/12 flex flex-col items-center space-y-10 p-3 pt-22 transition-all;
   }
 
   .offscreen-menu.active {
