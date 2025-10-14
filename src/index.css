@@ -5,7 +5,7 @@
 @layer components {
   /* Home */
   .main-navbar {
-    @apply items-center flex justify-between px-3 xl:px-52 h-16 text-xl sticky top-0 backdrop-blur-2xl transition-all ease-in-out z-50;
+    @apply items-center flex justify-between px-3 2xl:px-52 h-16 text-xl sticky top-0 backdrop-blur-2xl transition-all ease-in-out z-50;
   }
 
   .logo {
@@ -13,11 +13,11 @@
   }
 
   .pages {
-    @apply hidden md:flex items-center space-x-10 h-full;
+    @apply hidden 2xl:flex items-center space-x-10 h-full;
   }
 
   .offscreen-menu-btn {
-    @apply md:hidden h-4/5 w-12 relative z-10 cursor-pointer;
+    @apply 2xl:hidden h-4/5 w-12 relative z-10 cursor-pointer;
   }
 
   .offscreen-menu-btn span {
@@ -47,7 +47,7 @@
   }
 
   .offscreen-menu {
-    @apply md:hidden h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 -right-11/12 flex flex-col items-center space-y-10 p-3 pt-22 transition-all;
+    @apply 2xl:hidden h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 -right-11/12 flex flex-col items-center space-y-10 p-3 pt-22 transition-all;
   }
 
   .offscreen-menu.active {
