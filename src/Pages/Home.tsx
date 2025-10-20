@@ -25,7 +25,7 @@ const Home = () => {
       <div className="content-wrapper">
         <div className="headline" id="headline">
           <div className="head-left montserrat-regular">
-            <h1>Hi, I’m Praise Nacua</h1>
+            <h1>Hi there, I’m Praise Nacua</h1>
             <p> — I build creative, functional, and clean web solutions.</p>
           </div>
           <div className="head-right">
@@ -61,7 +61,7 @@ const Home = () => {
           <h5>SKILLS</h5>
           <ul>
             <li>
-              <strong>Frontend</strong>:
+              <strong>Frontend:</strong>
               <div className="specific-skill">
                 <FontAwesomeIcon icon={faHtml5} /> <span>HTML5</span>
               </div>
@@ -82,7 +82,7 @@ const Home = () => {
               </div>
             </li>
             <li>
-              <strong>Backend</strong>:
+              <strong>Backend:</strong>
               <div className="specific-skill">
                 <Codeigniter />
                 <span>CodeIgniter</span>
@@ -97,7 +97,7 @@ const Home = () => {
               </div>
             </li>
             <li>
-              <strong>Tools</strong>:
+              <strong>Tools:</strong>
               <div className="specific-skill">
                 <Git />
                 <span>Git</span>

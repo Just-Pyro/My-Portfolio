@@ -55,38 +55,41 @@
   }
 
   .content-wrapper {
-    @apply mt-7 px-52 pb-10 min-h-screen;
+    @apply mt-7 px-3 lg:px-52 pb-10 min-h-screen;
   }
 
   .headline,
   .subheading {
-    @apply text-lg flex py-5;
+    @apply text-lg flex flex-col lg:flex-row py-5;
   }
 
   .head-left {
-    @apply w-1/2 flex flex-col justify-end pb-5;
+    @apply lg:w-1/2 flex flex-col justify-end pb-5;
   }
 
   .sub-left {
-    @apply w-1/2 flex items-center justify-center pb-5;
+    @apply lg:w-1/2 flex items-center justify-center pb-5;
   }
 
   .head-left h1 {
-    @apply text-7xl font-bold;
+    @apply italic lg:not-italic text-5xl lg:text-7xl font-bold;
   }
 
-  .head-right,
-  .sub-right {
-    @apply w-1/2 flex items-center justify-center;
+  .head-right {
+    @apply w-1/2 hidden lg:flex items-center justify-center;
   }
 
   .sub-right {
-    @apply text-2xl italic;
+    @apply lg:w-1/2 flex items-center justify-center;
+  }
+
+  .sub-right {
+    @apply text-lg lg:text-2xl italic;
   }
 
   .img-wrapper,
   .cat-gif {
-    @apply w-84 h-96 hover:scale-105 transition-all ease-in-out rounded-lg overflow-hidden shadow-2xl;
+    @apply w-52 lg:w-84 h-72 lg:h-96 hover:scale-105 transition-all ease-in-out rounded-lg overflow-hidden shadow-2xl;
   }
 
   .profile-img {
@@ -114,19 +117,23 @@
   }
 
   .skills ul {
-    @apply p-5;
+    @apply lg:p-5 space-y-5 lg:space-y-0;
   }
 
   .skills li {
     @apply space-y-5;
   }
 
+  .skills li strong {
+    @apply block lg:inline-block;
+  }
+
   .specific-skill {
-    @apply py-2 px-3 rounded-lg bg-stone-700 w-auto inline-flex mx-2 hover:scale-110 transition-all ease-in-out cursor-default items-center gap-1.5 shadow-md;
+    @apply py-2 px-3 rounded-lg bg-stone-700 w-auto inline-flex mx-1 lg:mx-2 hover:scale-110 transition-all ease-in-out cursor-default items-center gap-1.5 shadow-md;
   }
 
   .specific-skill span {
-    @apply text-lg;
+    @apply text-base lg:text-lg;
   }
 
   /* About */
@@ -195,11 +202,15 @@
 
   /* Footer */
   .footer {
-    @apply flex;
+    @apply flex flex-col lg:flex-row;
   }
 
   #contact-me {
-    @apply p-8 flex flex-grow;
+    @apply px-3 lg:p-8 flex flex-col-reverse lg:flex-row flex-grow;
+  }
+
+  .subfooter-left {
+    @apply flex justify-center;
   }
 
   .subfooter-left img {
@@ -219,7 +230,7 @@
   }
 
   .rights-reserved {
-    @apply pb-5 mr-3 flex items-end;
+    @apply px-3 lg:px-0 pb-5 lg:mr-3 flex justify-center lg:items-end;
   }
 
   /* Project */
@@ -254,14 +265,15 @@
 
 @layer base {
   body {
-    height: 100vh;
+    min-height: 100vh;
+    /* overflow-x: hidden; */
     background: radial-gradient(
       circle at 45% 20%,
       rgba(0, 0, 0, 0.64) 0%,
       #141212 70%
     );
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     color: white;
   }
