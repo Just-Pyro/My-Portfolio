@@ -17,7 +17,7 @@
   }
 
   .offscreen-menu-btn {
-    @apply z-50 2xl:hidden h-4/5 w-12 relative z-10 cursor-pointer;
+    @apply z-50 2xl:hidden h-4/5 w-12 relative cursor-pointer;
   }
 
   .offscreen-menu-btn span {
@@ -47,7 +47,7 @@
   }
 
   .offscreen-menu {
-    @apply z-40 hidden h-screen w-11/12 bg-black/75 backdrop-blur-3xl absolute top-0 right-0 flex-col items-center space-y-10 p-3 pt-22 transition-all;
+    @apply z-40 hidden h-screen w-11/12 bg-black/95 backdrop-blur-3xl absolute top-0 right-0 flex-col items-center space-y-10 p-3 pt-22 transition-all;
   }
 
   .offscreen-menu.active {
@@ -142,50 +142,58 @@
 
   /* About */
   .title {
-    @apply flex items-center justify-between p-5 mb-10;
+    @apply flex items-center justify-between p-2 lg:p-5 mb-10;
   }
   .title h3 {
-    @apply text-9xl font-extrabold;
+    @apply text-5xl text-right md:text-left lg:text-9xl font-extrabold;
   }
 
   .title-left,
   .title-right {
-    @apply w-1/2;
+    @apply md:w-1/2;
   }
 
   .title-left {
-    @apply flex justify-end lg:pe-10;
+    @apply flex justify-end md:pe-5 lg:pe-10;
   }
 
   .aboutme-img,
   .stack-1,
   .stack-2 {
-    @apply rounded-2xl border-4 border-white w-[300px] h-[300px] absolute top-0 left-0 shadow-xl;
+    @apply rounded-2xl border-4 border-white w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] absolute top-0 left-0 shadow-xl;
   }
 
   .image-wrapper {
-    @apply relative w-[300px] h-[300px];
+    @apply relative w-[200px] lg:w-[300px] h-[200px] lg:h-[300px];
   }
 
   .stack-1 {
-    @apply bg-amber-300 -rotate-[24deg];
+    @apply bg-amber-300 -rotate-[16deg] lg:-rotate-[24deg];
   }
 
   .stack-2 {
-    @apply bg-emerald-700 -rotate-12;
+    @apply bg-emerald-700 -rotate-8 lg:-rotate-12;
   }
 
   .intro {
-    @apply text-3xl indent-16 flex-col space-y-5 mb-10;
+    @apply text-2xl lg:text-3xl indent-16 flex-col space-y-5 mb-10;
   }
 
   .intro div {
-    @apply flex space-x-5 text-justify;
+    @apply lg:flex space-x-5 text-justify;
   }
 
   .paragraph-1 img,
   .paragraph-2 img {
-    @apply w-[300px] h-[300px] object-contain rounded-2xl;
+    @apply w-[180px] h-[180px] lg:w-[300px] lg:h-[300px] object-contain rounded-2xl;
+  }
+
+  .paragraph-1 img {
+    @apply float-right;
+  }
+
+  .paragraph-2 img {
+    @apply float-left lg:float-none;
   }
 
   .work-style h5 {
@@ -197,11 +205,11 @@
   }
 
   .work-style div {
-    @apply flex space-x-5;
+    @apply flex items-center flex-col space-y-3 lg:space-y-0 lg:flex-row lg:space-x-5;
   }
 
   .work-style p {
-    @apply text-3xl indent-16 text-justify;
+    @apply text-2xl lg:text-3xl indent-16 text-justify;
   }
 
   /* Footer */

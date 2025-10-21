@@ -28,6 +28,7 @@ const About = () => {
         </div>
         <div className="intro">
           <div className="paragraph-1">
+            <img src={intro1} alt="" className="lg:hidden" />
             <p>
               Ever since Senior High, I’ve been hooked on programming — at first
               because I wanted to make my own game. When college came, my focus
@@ -36,7 +37,7 @@ const About = () => {
               focus on web development while keeping game development as a
               future goal.
             </p>
-            <img src={intro1} alt="" />
+            <img src={intro1} alt="" className="hidden lg:inline-block" />
           </div>
           <div className="paragraph-2">
             <img src={intro2} alt="" />
