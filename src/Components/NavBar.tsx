@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   const [menuActive, setMenuActive] = useState(false);
+
+  useEffect(() => {
+    if (menuActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuActive]);
 
   return (
     <nav className="main-navbar montserrat-regular">
@@ -31,13 +39,20 @@ const NavBar = () => {
       </div>
 
       <div className={`offscreen-menu ${menuActive ? "active" : ""}`}>
-        <HashLink smooth to="/#start-nav-reference">
+        <HashLink
+          smooth
+          to="/#start-nav-reference"
+          onClick={() => setMenuActive(false)}
+        >
           Home
         </HashLink>
-        <HashLink smooth to="/about#start-nav-reference">
+        <HashLink
+          smooth
+          to="/about#start-nav-reference"
+          onClick={() => setMenuActive(false)}
+        >
           About
         </HashLink>
-        <a href="#contact-me">Contact</a>
       </div>
     </nav>
   );

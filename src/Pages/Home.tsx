@@ -37,6 +37,7 @@ const Home = () => {
         <div className="subheading">
           <div className="sub-left">
             <img src={cat} alt="Cat Coding" className="cat-gif" />
+            <img src={profile} alt="profile pic" className="sub-profile-img" />
           </div>
           <div className="sub-right montserrat-regular">
             <p>
