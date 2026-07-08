@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import shopplanr from "../assets/img/project-thumbnail/ShopPlanr.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
 
 interface ProjectType {
     link: string;
-    thumbnail: string;
+    thumbnail: string | null;
     title: string;
     description: string;
+    status: string;
 }
 
 const Projects = () => {
@@ -28,22 +31,28 @@ const Projects = () => {
                     remaining budget in real time. Built across three platforms
                     (Expo, React, and Laravel Blade) with a shared REST API and
                     offline SQLite support on mobile.`,
+                status: "completed",
             },
             {
-                link: "https://github.com/Just-Pyro/Task-Manager",
-                thumbnail: "",
-                title: "Task Manager",
-                description: `A full-stack CRUD application that allows users
-                    to create, view, update, and delete tasks. Built
-                    with SQLite for persistent data storage, it
-                    demonstrates core skills in backend development,
-                    database integration, and building a clean,
-                    user-friendly interface.`,
+                link: "https://github.com/Just-Pyro/Tempo",
+                thumbnail: null,
+                title: "Tempo",
+                description: `An on-going personal productivity web app that helps users manage 
+                    daily tasks by tracking estimated vs. actual completion times. 
+                    Built around a clean CRUD architecture using Laravel and Blade.`,
+                status: "in-progress",
             },
         ];
 
         setProjects(list);
     }, []);
+
+    const capitalizeFirstLetterStatus = (str: string) => {
+        return str
+            .split("-")
+            .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    };
 
     return (
         <>
@@ -53,6 +62,10 @@ const Projects = () => {
                 <div className="project-list">
                     {projects.length > 0 ? (
                         projects.map((project) => {
+                            const status = capitalizeFirstLetterStatus(
+                                project.status,
+                            );
+
                             return (
                                 <a
                                     className="project-item"
@@ -60,10 +73,18 @@ const Projects = () => {
                                     target="_blank"
                                 >
                                     <div className="showcase">
-                                        <img
-                                            src={project.thumbnail}
-                                            className="max-w-full max-h-full object-fit-cover"
-                                        />
+                                        {project.thumbnail ? (
+                                            <img
+                                                src={project.thumbnail}
+                                                className="max-w-full max-h-full object-fit-cover"
+                                            />
+                                        ) : (
+                                            <div className="text-7xl text-gray-100">
+                                                <FontAwesomeIcon
+                                                    icon={faCircleQuestion}
+                                                />
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="brief-description">
                                         <p className="project-title montserrat-regular">
@@ -71,6 +92,11 @@ const Projects = () => {
                                         </p>
                                         <div className="project-text">
                                             {project.description}
+                                        </div>
+                                        <div
+                                            className={`project-status ${project.status}`}
+                                        >
+                                            {status}
                                         </div>
                                     </div>
                                 </a>
